@@ -1,15 +1,26 @@
-Source: template-repository
-Section: unknown
+Source: crudini
+Section: utils
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Zev Benjamin <zev@mit.edu>, Luke Faraone <lfaraone@debian.org>
+Build-Depends: debhelper-compat (= 13),
+ pybuild-plugin-pyproject,
+ python3,
+ python3-setuptools,
+ dh-python,
+# Needed to generate manpage
+ help2man,
+ python3-iniparse
+Standards-Version: 4.6.2
+Homepage: https://www.pixelbeat.org/programs/crudini/
+Vcs-Git: https://salsa.debian.org/python-team/packages/crudini.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/crudini
+Rules-Requires-Root: no
 
-Package: template-repository
+Package: crudini
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Depends: ${python3:Depends}, ${misc:Depends}, python3-iniparse
+Description: utility for manipulating ini files
+ crudini is a utility to simplify reading and updating ini files
+ from shell scripts, so named as it provides CRUD functionality.  It
+ can handle most variants of ini.

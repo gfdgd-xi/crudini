@@ -1,0 +1,40 @@
+From: =?utf-8?b?SsOpcsO0bWUgQ2hhcmFvdWk=?= <jerome@riseup.net>
+Date: Sun, 12 Feb 2023 16:13:27 -0500
+Subject: Adapt crudini-help script
+
+Forwarded: not-needed
+---
+ crudini-help | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+
+diff --git a/crudini-help b/crudini-help
+index 57c3fb1..e5d8d51 100755
+--- a/crudini-help
++++ b/crudini-help
+@@ -5,14 +5,14 @@
+ if [ "$1" = '--help' ]; then
+   {
+   printf '%s' 'crudini - '
+-  ./crudini.py --help | sed 's/crudini\.py/crudini/g;'
++  python3 crudini.py --help | sed 's/crudini\.py/crudini/g;'
+   echo
+   cat EXAMPLES
+   }
+ elif [ "$1" = '--markdown' ]; then
+   {
+   printf '%s' '# crudini - '
+-  ./crudini.py --help | sed 's/crudini\.py/crudini/g;'
++  python3 crudini.py --help | sed 's/crudini\.py/crudini/g;'
+   echo
+   cat EXAMPLES
+   } |
+@@ -21,8 +21,7 @@ elif [ "$1" = '--markdown' ]; then
+   sed 's/^ *or: *//' | # Delete help2man synopsis formatting
+   sed '0,/```/{/```/d;}' # Delete first ```
+   echo '```'  # Add terminating ```
+-  cat INSTALL # Already marked up
+ elif [ "$1" = '--version' ]; then
+-  ./crudini.py --version
++  python3 crudini.py --version
+ fi
+ 

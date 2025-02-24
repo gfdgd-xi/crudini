@@ -1,5 +1,85 @@
-template-repository (1.0-1) unstable; urgency=medium
+crudini (0.9.4-1) unstable; urgency=medium
 
-  * Initial release
+  * Team upload.
+  * New upstream version 0.9.4
+  * d/control:
+    + add pybuild-plugin-pyproject build-dep
+    + bump Standards-Version, no changes needed
+    + add Rules-Requires-Root: no
+  * d/watch: fix URL and pattern
+  * manpages no longer shipped upstream, generate at build
+  * add autopkgtests
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Jérôme Charaoui <jerome@riseup.net>  Sun, 12 Feb 2023 16:44:22 -0500
+
+crudini (0.9.3-6) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 12 to 13.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository-Browse.
+  * Update standards version to 4.6.1, no changes needed.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Mon, 31 Oct 2022 17:45:34 +0000
+
+crudini (0.9.3-5) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+ -- Sandro Tosi <morph@debian.org>  Wed, 08 Sep 2021 22:41:02 -0400
+
+crudini (0.9.3-4) unstable; urgency=medium
+
+  * dh_python3 ignores DH_OPTIONS, use an override rule instead
+    (Closes: #948886, #936346, #942976).
+  * Use secure homepage URL.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Sun, 19 Jan 2020 11:51:40 +0100
+
+crudini (0.9.3-3) unstable; urgency=medium
+
+  * Add missing setuptools build dependency.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Sun, 29 Dec 2019 11:32:47 +0100
+
+crudini (0.9.3-2) unstable; urgency=medium
+
+  * Force building with pybuild to fix FTBFS.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Sun, 29 Dec 2019 10:33:09 +0100
+
+crudini (0.9.3-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/copyright: Use https protocol in Format field.
+
+  [ Adrian Bunk ]
+  * New upstream release.
+  * Use Python 3. (Closes: #936346)
+
+  [ Andrej Shadura ]
+  * Use dh 12.
+  * Bump Standards-Version to 4.4.1.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Sun, 22 Dec 2019 19:56:24 +0100
+
+crudini (0.7-1) unstable; urgency=medium
+
+  * New upstream version
+  * Add dependency on dh-python
+  * Drop Debian-specific manpage in favour of upstream's
+  * Remove unused substitution variable in control
+  * Change maintainer to PAPT, update uploader email addresses
+  * Include upstream NEWS file
+  * Bump standards version; no changes needed
+
+ -- Luke Faraone <lfaraone@debian.org>  Sun, 12 Jul 2015 00:47:49 +0000
+
+crudini (0.3-1) unstable; urgency=low
+
+  * Initial release (Closes: #723740)
+
+ -- Zev Benjamin <zev@zulip.com>  Tue, 26 Nov 2013 15:07:23 -0500

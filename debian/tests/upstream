@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -eu
+
+# run the upstream test suite
+
+cp -a *.ini tests "$AUTOPKGTEST_TMP"
+cd "$AUTOPKGTEST_TMP"
+ln -s /usr/bin/crudini crudini.py
+cd tests
+./test.sh
